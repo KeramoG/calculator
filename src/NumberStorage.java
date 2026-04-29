@@ -6,19 +6,6 @@ public class NumberStorage {
         this.currentValue = value;
     }
 
-    public void storeValue(double value, int base) {
-        this.currentValue = value;
-        this.previousBase = base;
-    }
-
-    public void updateBase(int base) {
-        this.previousBase = base;
-    }
-
-    public int getStoredBase() {
-        return previousBase;
-    }
-
     public double getCurrentValue() {
         return currentValue;
     }
@@ -44,18 +31,11 @@ public class NumberStorage {
         }
     }
 
-    public void displayInSpecificBase(String description, int base) {
-        if (currentValue == (int) currentValue) {
-            System.out.println(description + " " + base + "-чная: " + convertToString((int)currentValue, base));
-        } else {
-            System.out.println(description + " (дробное число)");
-        }
-    }
 
     public static String convertToString(double value, int base) {
         if (value == (int) value) {
             int integerValue = (int) value;
-            return NumberBaseConverter.convertFromDecimalToBase(integerValue, base);
+            return NumberBaseConverter.convertFromDecimal(integerValue, base);
         } else {
             return String.valueOf(value);
         }

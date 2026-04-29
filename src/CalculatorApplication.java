@@ -24,7 +24,6 @@ public class CalculatorApplication {
     }
 
     private static void displayMainMenu() {
-        System.out.println("\n--- ГЛАВНОЕ МЕНЮ ---");
         System.out.println("1. Запомнить новое число");
         System.out.println("2. Выполнить операцию с текущим числом");
         System.out.println("3. Выход из программы");

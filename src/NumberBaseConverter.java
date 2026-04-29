@@ -15,13 +15,4 @@ public class NumberBaseConverter {
             return Integer.toString(decimalNumber, targetBase);
         }
     }
-
-    public static String convertFromDecimalToBase(int decimalNumber, int targetBase) {
-        switch (targetBase) {
-            case 2: return Integer.toBinaryString(decimalNumber);
-            case 8: return Integer.toOctalString(decimalNumber);
-            case 16: return Integer.toHexString(decimalNumber).toUpperCase();
-            default: return Integer.toString(decimalNumber, targetBase);
-        }
-    }
 }
